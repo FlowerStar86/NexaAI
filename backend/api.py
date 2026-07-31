@@ -32,6 +32,9 @@ except ImportError:
     from backend.agents.profile_agent import analyze_profile
 
 app = Flask(__name__)
+@app.route("/healthz")
+def healthz():
+    return {"status": "ok"}
 if has_cors:
     CORS(app)
 
