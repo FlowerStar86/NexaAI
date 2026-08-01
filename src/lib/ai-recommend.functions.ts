@@ -39,7 +39,7 @@ export type AiRecommendResult = {
 
 export async function fetchCareerFromAgents(data: unknown): Promise<AiRecommendResult> {
   const parsed = ProfileSchema.parse(data);
-  const response = await fetch("http://127.0.0.1:5000/career", {
+  const response = await fetch("https://nexaai-36we.onrender.com/career", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
